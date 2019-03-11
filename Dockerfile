@@ -9,7 +9,7 @@ ENV LC_ALL en_US.utf-8
 ENV PATH="/opt/conda/bin:${PATH}"
 
 RUN yum group install -y "Development Tools" \
-    && cd \tmp \
+    && cd /tmp \
     && curl -O https://repo.anaconda.com/miniconda/Miniconda3-${MINICONDA_VERSION}-Linux-x86_64.sh \
     && bash Miniconda3-${MINICONDA_VERSION}-Linux-x86_64.sh -b -p /opt/conda \
     && rm -rf Miniconda3-${MINICONDA_VERSION}-Linux-x86_64.sh \
